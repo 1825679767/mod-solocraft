@@ -13,57 +13,50 @@
 #  SOLOCRAFT
 ###################################################################################################
 
-# Enable the module? (1: true | 0: false)
+# 模块启用？（1：启用 | 0：禁用）
 Solocraft.Enable = 1
 
-# Announce the module when the player logs in?
+# 玩家登录时是否宣布该模块？
 Solocraft.Announce = 1
 
 
 ###################################################################################################
-#  Balancing - Groups (Overloading), Global Spellpower and Stats modifier, Global Class Balancing, 
-#  and XP Gain Balancing
+#  平衡 - 组（过载）、全局法术强度和属性修正、全局职业平衡和经验获取平衡
 ###################################################################################################
 
-# Enable Debuff of new party members who enter the dungeon to avoid overloading the dungeon? 
-# Overloading is when a group member already in the dungeon has the full offset/buff of the 
-# dungeon applied then they invite new group members who enter the dungeon and also receive an
-# offset which creates a huge imbalance. 
-# The debuff will make the new members weak until all members leave the instance/dungeon
-# instance/dungeon and re-enter which will then split the offset among all the group members.
+# 启用新进入地下城的团队成员的减益效果，以避免地下城过载？过载是指地下城中已有成员拥有完整的偏移/增益，然后他们邀请新进入地下城的团队成员，新成员也会获得一个偏移，从而造成巨大的不平衡。
+# 减益效果将使新成员变弱，直到所有成员离开副本/地下城并重新进入，然后偏移将分配给所有团队成员。
 
-# Default: 	1 (on)
-#			0 (off)
+# 默认：	1（启用）
+#			0（禁用）
 SoloCraft.Debuff.Enable = 1
 
 
-# Spellpower Bonus Multiplier
-# Spellcasters spellpower bonus multiplier to offset no spellpower received from stats
-# Formula: (player->level * multiplier) * ((classBalance / 100) * difficulty)
-# Example Level 24 Mage with default modifier and  a dungeon difficulty of 5 will receive a base 
-# Spellpower increase of 300.
+# 法术强度奖励乘数
+# 用于平衡施法者的法术强度奖励乘数，以抵消未从属性获得的法术强度
+# 公式：（玩家等级 * 乘数）* （（职业平衡/ 100）* 难度）
+# 示例：默认修改器下的24级法师和难度为5的地下城将获得300的基础法术强度增加。
 
-# Default:	2.5
-#			0.0 (Disable)
+# 默认：	2.5
+#			0.0（禁用）
 SoloCraft.Spellpower.Mult = 2.5
 
 
-# Stats Percentage Bonus Multiplier
-# Forumla: player->Stats * (((classBalance / 100) * difficulty) * multiplier)
+# 属性百分比奖励乘数
+# 公式：player->Stats *（（（职业平衡/ 100）* 难度）* 乘数）
 
-# Default: 	100.0
-#			0.0	(Disable)
+# 默认：	100.0
+#			0.0	（禁用）
 SoloCraft.Stats.Mult = 100.0
 
 
-# Class Balancing Modifier
-# This settings will only allow the percentage specified of the difficulty for the specified class
-# Example Level 24 Mage with default modifier (2.5), a dungeon difficulty of 5, and a 80 percent class
-# balance modifier will receive a base Spellpower increase of 240.
-# Note: 0 will completely disable the class from receiving difficulty modifiers from any dungeon
+# 职业平衡修正
+# 此设置将仅允许为指定职业的难度指定的百分比
+# 示例：默认修改器（2.5）下的24级法师，难度为5，80%的职业平衡修正将获得240的基础法术强度增加。
+# 注意：0将完全禁用任何地下城对该职业的难度修饰符的影响
 
-#Default: 100 (Full Dungeon Difficulty Modifer will be Applied)
-#    	  0 (Disable) - 100
+# 默认：100（将应用完整的地下城难度修改器）
+#    	  0（禁用）- 100
 
 SoloCraft.DEATH_KNIGHT = 100
 SoloCraft.DRUID = 100
@@ -77,31 +70,30 @@ SoloCraft.WARLOCK = 100
 SoloCraft.WARRIOR = 100
 
 
-# XP Gain 
-# This settings will Enable/Disable XP gained while in the current dungeon
+# 经验获取
+# 此设置将启用/禁用在当前地下城中获得的经验值
 
-#Default: 1 (Enabled)
-#    	  0 (Disable)
+# 默认：1（启用）
+#    	  0（禁用）
 
 Solocraft.XP.Enabled = 1
 
 
-# XP Balancing (XP Gain must be Enabled)
-# This settings will decrease the XP gained based on the Difficulty setting of the dungeon
-# and how many players are in the group.
+# 经验平衡（必须启用经验获取）
+# 此设置将根据地下城的难度设置以及团队中的玩家数量减少获得的经验值
 
-#Default: 1 (Enabled)
-#    	  0 (Disable)
+# 默认：1（启用）
+#    	  0（禁用）
 
 Solocraft.XPBal.Enabled = 1
 
 
 ################################################################################################
-#Catch all Bucket - Difficulty Offset Defaults
+# 捕捉所有桶 - 难度偏移默认值
 ################################################################################################
 
-# Difficulty Multipliers
-# Defaults: 5, 10, 25, 40
+# 难度乘数
+# 默认值：5，10，25，40
 Solocraft.Dungeon = 5.0 
 Solocraft.Heroic = 10.0
 Solocraft.Raid25 = 25.0
@@ -109,7 +101,7 @@ Solocraft.Raid40 = 40.0
 
 
 ################################################################################################
-#Classic Instances - Difficulty
+# 经典副本 - 难度
 ################################################################################################
 
 Solocraft.ShadowfangKeep = 5.0
@@ -122,83 +114,83 @@ Solocraft.Uldaman = 5.0
 Solocraft.GnomeragonInstance = 5.0
 Solocraft.SunkenTemple = 5.0
 Solocraft.RazorfenDowns = 5.0
-# Scarlet Monastery
+# 血色修道院
 Solocraft.MonasteryInstances = 5.0
-# Zul'Farrak
+# 祖尔法拉克
 Solocraft.TanarisInstance = 5.0
 Solocraft.BlackRockSpire = 10.0
 Solocraft.BlackrockDepths = 5.0
 Solocraft.OnyxiaLairInstance = 40.0
-#Scholomance
+# 通灵学院
 Solocraft.SchoolofNecromancy = 5.0
 Solocraft.Zul'gurub = 20.0
 Solocraft.Stratholme = 5.0
 Solocraft.Mauradon = 5.0
-# Ragefire Chasm
+# 熔火之心
 Solocraft.OrgrimmarInstance = 5.0
 Solocraft.MoltenCore = 40.0
 Solocraft.DireMaul = 5.0
 Solocraft.BlackwingLair = 60.0
-# Ruins of Ahn'Qiraj
+# 安其拉废墟
 Solocraft.AhnQiraj = 20.0
 Solocraft.AhnQirajTemple = 40.0
 
 
 ################################################################################################
-#BC Instances - Difficulty
+# 燃烧的远征副本 - 难度
 ################################################################################################
 
-# The Black Morass
+# 黑色沼泽
 Solocraft.CavernsOfTime = 5.0
 Solocraft.CavernsOfTimeH = 5.0
 Solocraft.Karazahn = 10.0
-# The Battle for Mount Hyjal - Hyjal Summit
+# 耐奥祖的战斗 - 耐奥祖之巅
 Solocraft.HyjalPast = 25.0
-# The Shattered Halls
+# 破碎大厅
 Solocraft.HellfireMilitary = 5.0
 Solocraft.HellfireMilitaryH = 5.0
-# The Blood Furnace
+# 鲜血熔炉
 Solocraft.HellfireDemon = 5.0
 Solocraft.HellfireDemonH = 5.0
 Solocraft.HellfireRampart = 5.0
 Solocraft.HellfireRampartH = 5.0
-# Magtheridon's Lair
+# 玛瑟里顿的巢穴
 Solocraft.HellfireRaid = 25.0
-# The Steamvault
+# 蒸汽地窖
 Solocraft.CoilfangPumping = 5.0
 Solocraft.CoilfangPumpingH = 5.0
-# The Underbog
+# 深渊之塔
 Solocraft.CoilfangMarsh = 5.0
 Solocraft.CoilfangMarshH = 5.0
-# The Slavepens
+# 奴隶围栏
 Solocraft.CoilfangDraenei = 5.0
 Solocraft.CoilfangDraeneiH = 5.0
-# Serpentshrine Cavern
+# 毒蛇神殿
 Solocraft.CoilfangRaid = 25.0
-# The Eye
+# 风暴要塞
 Solocraft.TempestKeepRaid = 25.0
-# The Arcatraz
+# 奥尔达隆
 Solocraft.TempestKeepArcane = 5.0
 Solocraft.TempestKeepArcaneH = 5.0
-# The Botanica	
+# 波塔尼卡	
 Solocraft.TempestKeepAtrium = 5.0
 Solocraft.TempestKeepAtriumH = 5.0
-# The Mechanar
+# 机械监狱
 Solocraft.TempestKeepFactory = 5.0
 Solocraft.TempestKeepFactoryH = 5.0
-# Shadow Labyrinth		
+# 暗影迷宫		
 Solocraft.AuchindounShadow = 5.0	
 Solocraft.AuchindounShadowH = 5.0	
-# Sethekk Halls
+# 塞泰克大厅
 Solocraft.AuchindounDemon = 5.0 	
 Solocraft.AuchindounDemonH = 5.0
-# Mana-Tombs
+# 法力墓地
 Solocraft.AuchindounEthereal = 5.0
 Solocraft.AuchindounEtherealH = 5.0
-# Auchenai Crypts
+# 奥金尼墓地
 Solocraft.AuchindounDraenei = 5.0 
 Solocraft.AuchindounDraeneiH = 5.0
-# Old Hillsbrad Foothills
+# 旧希尔斯布莱德丘陵
 Solocraft.HillsbradPast = 5.0
 Solocraft.HillsbradPastH = 5.0
 Solocraft.BlackTemple = 25.0
@@ -206,107 +198,106 @@ Solocraft.GruulsLair = 25.0
 Solocraft.ZulAman = 5.0
 Solocraft.ZulAmanH = 5.0
 Solocraft.SunwellPlateau = 25.0
-# Magister's Terrace
+# 玛瑟里顿的庭院
 Solocraft.Sunwell5ManFix = 5.0
 Solocraft.Sunwell5ManFixH = 5.0
 
 
 ################################################################################################
-#WOTLK Instances - Difficulty
+# 巫妖王之怒副本 - 难度
 ################################################################################################
 
-# Naxxramas
+# 凯尔萨斯城
 Solocraft.StratholmeRaid = 10.0
 Solocraft.StratholmeRaidH = 25.0
-# Utgarde Keep
+# 北风要塞
 Solocraft.Valgarde70 = 5.0
 Solocraft.Valgarde70H = 5.0
 Solocraft.UtgardePinnacle = 5.0
 Solocraft.UtgardePinnacleH = 5.0
-# The Nexus
+# 霜狼要塞
 Solocraft.Nexus70 = 5.0
 Solocraft.Nexus70H = 5.0
-# The Occulus
+# 奥核之眼
 Solocraft.Nexus80 = 5.0
 Solocraft.Nexus80H = 5.0
-# The Culling of Stratholme
+# 斯坦索姆的净化
 Solocraft.StratholmeCOT = 5.0
 Solocraft.StratholmeCOTH = 5.0
-# Halls of Stone
+# 石之大厅
 Solocraft.Ulduar70 = 5.0
 Solocraft.Ulduar70H = 5.0
-# Drak'Tharon Keep
+# 德拉克萨隆要塞
 Solocraft.DrakTheronKeep = 5.0
 Solocraft.DrakTheronKeepH = 5.0
-# Azjol-Nerub
+# 阿兹洛布
 Solocraft.Azjol_Uppercity = 5.0
 Solocraft.Azjol_UppercityH = 5.0
-# Halls of Lighting
+# 闪电大厅
 Solocraft.Ulduar80 = 5.0
 Solocraft.Ulduar80H = 5.0
-# Ulduar
+# 奥杜尔
 Solocraft.UlduarRaid = 10.0
 Solocraft.UlduarRaidH = 25.0
 Solocraft.GunDrak = 5.0
 Solocraft.GunDrakH = 5.0
-# Violet Hold
+# 紫罗兰监狱
 Solocraft.DalaranPrison = 5.0
 Solocraft.DalaranPrisonH = 5.0
-# The Obsidian Sanctum
+# 黑龙之巢
 Solocraft.ChamberOfAspectsBlack = 10.0
 Solocraft.ChamberOfAspectsBlackH = 25.0
-# The Eye of Eternity
+# 永恒之眼
 Solocraft.NexusRaid = 10.0
 Solocraft.NexusRaidH = 25.0
-# Ahn'kahet: The Old Kingdom
+# 安卡赫特：古代王国
 Solocraft.Azjol_LowerCity = 5.0
 Solocraft.Azjol_LowerCityH = 5.0
 Solocraft.IcecrownCitadel = 10.0
 Solocraft.IcecrownCitadelH = 25.0
-# The Forge of Souls
+# 火源要塞
 Solocraft.IcecrownCitadel5Man = 5.0
 Solocraft.IcecrownCitadel5ManH = 5.0
-# Trial of the Crusader
+# 十字军的试炼
 Solocraft.ArgentTournamentRaid = 10.0
 Solocraft.ArgentTournamentRaidH = 25.0
-# Grand Trial of the Crusader Heroic
+# 十字军的大审判场 英雄模式
 Solocraft.ArgentTournamentRaidH10 = 10.0
 Solocraft.ArgentTournamentRaidH25 = 25.0
-# Trial of the Champion
+# 冠军的试炼
 Solocraft.ArgentTournamentDungeon = 5.0
 Solocraft.ArgentTournamentDungeonH = 5.0
-# Pit of Saron
+# 萨隆矿坑
 Solocraft.QuarryOfTears = 5.0
 Solocraft.QuarryOfTearsH = 5.0
-# Halls of Reflection
+# 回响大厅
 Solocraft.HallsOfReflection = 5.0
 Solocraft.HallsOfReflectionH = 5.0
-# The Ruby Sanctum
+# 红玉圣殿
 Solocraft.ChamberOfAspectsRed = 5.0
 Solocraft.ChamberOfAspectsRedH = 5.0
 
 
 ################################################################################################
-#Player Level Thresholds 
+# 玩家等级阈值 
 ################################################################################################
 
-#Max player level difference over the Dungeon's Level for Solocraft to apply the 
-# difficulty offset buff.
-# Default: 	10
-# Disable: 80
+# Solocraft应用难度偏移增益的地下城级别的最大玩家等级差异。
+# 默认: 10
+# 禁用: 80
 Solocraft.Max.Level.Diff = 10
 
 
 ################################################################################################
-#Dungeon Base Levels
+#地下城基本等级
 ################################################################################################
 
-#Catch All - Default 80
+#全部接收 - 默认 80
 Solocraft.Dungeon.Level = 80
 
 
 ################################################################################################
-#Classic Instances - Base Level
+#经典副本 - 基本等级
 ################################################################################################
 
 Solocraft.ShadowfangKeep.Level = 15
@@ -319,123 +310,127 @@ Solocraft.Uldaman.Level = 40
 Solocraft.GnomeragonInstance.Level = 24
 Solocraft.SunkenTemple.Level = 50
 Solocraft.RazorfenDowns.Level = 40
-# Scarlet Monastery
+# 血色修道院
 Solocraft.MonasteryInstances.Level = 35
-# Zul'Farrak
+# 祖尔法拉克
 Solocraft.TanarisInstance.Level = 44
 Solocraft.BlackRockSpire.Level = 55
 Solocraft.BlackrockDepths.Level = 50
 Solocraft.OnyxiaLairInstance.Level = 60
-#Scholomance
+#通灵学院
 Solocraft.SchoolofNecromancy.Level = 55
 Solocraft.Zul'gurub.Level = 60
 Solocraft.Stratholme.Level = 55
 Solocraft.Mauradon.Level = 48
-# Ragefire Chasm
+# 熔火之心
 Solocraft.OrgrimmarInstance.Level = 15
 Solocraft.MoltenCore.Level = 60
 Solocraft.DireMaul.Level = 48
 Solocraft.BlackwingLair.Level = 40
-# Ruins of Ahn'Qiraj
+# 安其拉废墟
 Solocraft.AhnQiraj.Level = 60
 Solocraft.AhnQirajTemple.Level = 60
 
 
 ################################################################################################
-#BC Instances - Base Level
+# 燃烧的远征副本 - 基本等级
 ################################################################################################
 
-# The Black Morass
+# 黑色沼泽
 Solocraft.CavernsOfTime.Level = 68
 Solocraft.Karazahn.Level = 68
-# The Battle for Mount Hyjal - Hyjal Summit
+# 耐奥祖的战斗 - 耐奥祖之巅
 Solocraft.HyjalPast.Level = 70
-# The Shattered Halls
+# 破碎大厅
 Solocraft.HellfireMilitary.Level = 68
-# The Blood Furnace
+# 鲜血熔炉
 Solocraft.HellfireDemon.Level = 68
 Solocraft.HellfireRampart.Level = 68
-# Magtheridon's Lair
+# 玛瑟里顿的巢穴
 Solocraft.HellfireRaid.Level = 68
-# The Steamvault
+# 蒸汽地窖
 Solocraft.CoilfangPumping.Level = 68
-# The Underbog
+# 深渊之塔
 Solocraft.CoilfangMarsh.Level = 68
-# The Slavepens
+# 奴隶围栏
 Solocraft.CoilfangDraenei.Level = 68
-# Serpentshrine Cavern
+# 毒蛇神殿
 Solocraft.CoilfangRaid.Level = 70
-# The Eye
+# 风暴要塞
 Solocraft.TempestKeepRaid.Level = 70
-# The Arcatraz
+# 奥尔达隆
 Solocraft.TempestKeepArcane.Level = 68
-# The Botanica	
+# 波塔尼卡	
 Solocraft.TempestKeepAtrium.Level = 68
-# The Mechanar
+# 机械监狱
 Solocraft.TempestKeepFactory.Level = 68
-# Shadow Labyrinth		
-Solocraft.AuchindounShadow.Level = 68
-# Sethekk Halls
+# 暗影迷宫		
+Solocraft.AuchindounShadow.Level = 68	
+# 塞泰克大厅
 Solocraft.AuchindounDemon.Level = 68
-# Mana-Tombs
+# 法力墓地
 Solocraft.AuchindounEthereal.Level = 68
-# Auchenai Crypts
+# 奥金尼墓地
 Solocraft.AuchindounDraenei.Level = 68
-# Old Hillsbrad Foothills
+# 旧希尔斯布莱德丘陵
 Solocraft.HillsbradPast.Level = 68
+# 黑暗神殿
 Solocraft.BlackTemple.Level = 70
 Solocraft.GruulsLair.Level = 70
 Solocraft.ZulAman.Level = 68
 Solocraft.SunwellPlateau.Level = 70
-# Magister's Terrace
+# 玛瑟里顿的庭院
 Solocraft.Sunwell5ManFix.Level = 68
 
 
 ################################################################################################
-#WOTLK Instances - Base Level
+# 巫妖王之怒副本 - 基本等级
 ################################################################################################
 
-# Naxxramas
-Solocraft.StratholmeRaid.Level = 78
-# Utgarde Keep
-Solocraft.Valgarde70.Level = 78
-Solocraft.UtgardePinnacle.Level = 78
-# The Nexus
-Solocraft.Nexus70.Level = 78
-# The Occulus
-Solocraft.Nexus80.Level = 78
-# The Culling of Stratholme
-Solocraft.StratholmeCOT.Level = 78
-# Halls of Stone
-Solocraft.Ulduar70.Level = 78
-# Drak'Tharon Keep
-Solocraft.DrakTheronKeep.Level = 78
-# Azjol-Nerub
-Solocraft.Azjol_Uppercity.Level = 78
-# Halls of Lighting
-Solocraft.Ulduar80.Level = 78
-# Ulduar
+# 凯尔萨斯城
+Solocraft.StratholmeRaid.Level = 80
+# 北风要塞
+Solocraft.Valgarde70.Level = 68
+Solocraft.UtgardePinnacle.Level = 75
+# 霜狼要塞
+Solocraft.Nexus70.Level = 68
+# 奥核之眼
+Solocraft.Nexus80.Level = 68
+# 斯坦索姆的净化
+Solocraft.StratholmeCOT.Level = 68
+# 石之大厅
+Solocraft.Ulduar70.Level = 68
+# 德拉克萨隆要塞
+Solocraft.DrakTheronKeep.Level = 68
+# 阿兹洛布
+Solocraft.Azjol_Uppercity.Level = 68
+# 闪电大厅
+Solocraft.Ulduar80.Level = 68
+# 奥杜尔
 Solocraft.UlduarRaid.Level = 80
-Solocraft.GunDrak.Level = 78
-# Violet Hold
-Solocraft.DalaranPrison.Level = 78
-# The Obsidian Sanctum
+Solocraft.GunDrak.Level = 68
+# 紫罗兰监狱
+Solocraft.DalaranPrison.Level = 68
+# 黑龙之巢
 Solocraft.ChamberOfAspectsBlack.Level = 80
-# The Eye of Eternity
+# 永恒之眼
 Solocraft.NexusRaid.Level = 80
-# Ahn'kahet: The Old Kingdom
-Solocraft.Azjol_LowerCity.Level = 78
-#Icecrown Citadel
+# 安卡赫特：古代王国
+Solocraft.Azjol_LowerCity.Level = 68
 Solocraft.IcecrownCitadel.Level = 80
-# The Forge of Souls
-Solocraft.IcecrownCitadel5Man.Level = 78
-# Trial of the Champion
-Solocraft.ArgentTournamentDungeon.Level = 80
-# Trial of the Crusader
+# 火源要塞
+Solocraft.IcecrownCitadel5Man.Level = 68
+# 十字军的试炼
 Solocraft.ArgentTournamentRaid.Level = 80
-# Pit of Saron
-Solocraft.QuarryOfTears.Level = 78
-# Halls of Reflection
-Solocraft.HallsOfReflection.Level = 78
-# The Ruby Sanctum
+# 十字军的大审判场 英雄模式
+Solocraft.ArgentTournamentRaidH10.Level = 80
+Solocraft.ArgentTournamentRaidH25.Level = 80
+# 冠军的试炼
+Solocraft.ArgentTournamentDungeon.Level = 68
+# 萨隆矿坑
+Solocraft.QuarryOfTears.Level = 68
+# 回响大厅
+Solocraft.HallsOfReflection.Level = 68
+# 红玉圣殿
 Solocraft.ChamberOfAspectsRed.Level = 80
+
